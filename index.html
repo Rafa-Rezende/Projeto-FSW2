@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Bom Preço</title>
+
+    
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="Cabeçalho">
+        <header ><h1 class="titulo_pagina">Bom Preço</h1></header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center"></div>
+                <nav>
+                    <div class="menu d-flex justify-content-center">
+                        <p class="mx-3"><a href="produtos.html">Produtos</a></p>
+                        <p class="mx-3"><a href="serviços.html">Serviços</a></p>
+                        <p class="mx-3"><a href="contatos.html">Contatos</a></p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <button class="btn btn-primary botao_cadastro " data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastrar-se</button>
+        <div class="modal fade" id="cadastroModal"  aria-labelledby="cadastroModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModalCadastro">Cadastre-se</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                    <div class="modal-body">
+                        <form>
+                            <fieldset>
+                                <legend>Dados Pessoais</legend>
+                                <label class="form-label">Nome: </label>
+                                <input type="text" name="nome" placeholder="Nome Completo" class="class_input_name form-label" required>
+                                <br><br>
+                                <label class="form-label">Endereço: </label>
+                                <input type="text" name="endereco" placeholder="Endereço completo" class="class_input_endereco form-label">
+                                <br><br>
+                                <label class="form-label">Telefone: </label>
+                                <input type="tel" name="telefone" placeholder="(xx)xxxxx-xxxx" class="class_input_telefone form-label" required>
+                                <br><br>
+                                <label class="form-label">Email: </label>
+                                <input type="email" name="email" placeholder="Email" class="class_input_email form-label" required>
+                                <br><br>
+                                <label class="form-label">Senha: </label>
+                                
+                                <input type="password" name="senha" placeholder="Senha" class="class_input_senha form-label" required>
+                                <label class="form-label">CPF</label>
+                                <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" class="class_input_cpf form-label" required>
+                                <label class="form-label">Data de Nascimento</label>
+                                <input type="date" name="data_nascimento" class="class_input_data form-label" required>
+                                <label class="form-label">Gênero</label>
+                                <select name="genero" class="class_input_genero form-label">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                </select>
+                                
+                                <input type="submit" value="Enviar" class="btn btn-primary">
+                                
+                                <br><br>
+                            </fieldset>
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+    <main>
+
+        <section class="produtos">
+            <h3 class="text-center titulo_produto">Produtos</h3>
+        
+    <div class = "container-fluid">
+        <div class = "row">
+            <!-- FILTRO OCUPA 4 ESPAÇOS DOS 12 ESPAÇOS DO BOOTSTRAP -->
+            <div class = "col-sm-2 colunas_filtro">
+                <h4 class="titulo_filtro text-center">Filtro</h4>
+                <!---------------------------------------------->
+                <form class="filtro_produto">
+                    <div class="mb-2">
+                        <label  class="form-label">Categoria:</label>
+                        <select class="form-select">
+                            <option value="todas">Todas</option>
+                            <option value="frutas">Frutas</option>
+                            <option value="legumes">Legumes</option>
+                            <option value="enlatados">Enlatados</option>
+                            <option value="higiene">Higiene</option>
+                            <option value="limpeza">Limpeza</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Faixa de Preço:</label>
+                        <select class="form-select" >
+                            <option value="todas">Todas</option>
+                            <option value="0-5">0$ - 5$</option>
+                            <option value="5-10">5$ - 10$</option>                           
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Ordenar por:</label>
+                        <select class="form-select" >
+                            <option value="nome_asc">Nome (A-Z)</option>
+                            <option value="nome_desc">Nome (Z-A)</option>
+                            <option value="preco_asc">Preço (Menor para Maior)</option>
+                            <option value="preco_desc">Preço (Maior para Menor)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Aplicar Filtros</button>
+                </div>
+                </form>
+<!----------------------------------------------------------------------------------------------------------------->
+<!-- OS PRODUTOS OCUPAM 10 ESPAÇOS DE 12 DO BOOTSTRAP -->
+
+<div class = "col-sm-10">
+    <div class= "row">
+
+        <div class = "col-sm-4 mb-3 text-center">
+            <div class = "cartao_produto">
+                <h4 class="nome_produto text-center">Melancia</h4>
+                <img src="melancia.png" class = "img-fluid foto_produto" alt="imagem_melancia">
+                <p class="preco">9,00$/kg</p>
+
+                <div class="card_completo">
+                    <p class="descricao_produto">Melancia madura de tamanho medio</p>
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Melancia')">+</button>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+        <div class = "col-sm-4 mb-3">
+            <div class = "cartao_produto" >
+                <h4 class="nome_produto text-center">Beterraba</h4>
+                <img src="beterraba.png" class = "img-fluid foto_produto beterraba" alt="imagem_Beterraba">
+                <p class="preco">3,99$/kg</p>   
+
+                <div class="card_completo"> 
+                    <p class="descricao_produto">Beterrabas frescas</p>
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>   
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Beterraba')">+</button>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+        <div class = "col-sm-4 mb-3">
+            <div class = "cartao_produto" >
+                <h4 class="nome_produto text-center">Cogumelos champignons</h4>
+                <img src="champignons.png" class = "img-fluid foto_produto" alt="imagem_Cogumelos"> 
+                <p class="preco">5,00$</p>
+
+                <div class="card_completo">                               
+                    <p class="descricao_produto">Cogumelos enlatados e selecionados</p>
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Cogumelos champignons')">+</button>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+        <div class = "col-sm-4 mb-3">
+            <div class = "cartao_produto" >
+                <h4 class="nome_produto text-center">Azeitona Azapa</h4>
+                <img src="azeitona.png" class = "img-fluid foto_produto" alt="imagem_Azeitona_Azapa">
+                <p class="preco">4,99$</p>
+
+                <div class="card_completo">
+                    <p class="descricao_produto">Azeitonas chilenas em conserva</p>
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Azeitona Azapa')">+</button>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+        <div class = "col-sm-4 mb-3">
+            <div class = "cartao_produto">
+                <h4 class="nome_produto text-center">Sabonete Liquido</h4> 
+                <img src="sabonete.png" class = "img-fluid foto_produto" alt="imagem_Sabonete_Liquido">
+                <p class="preco">2,50$</p>
+
+                <div class="card_completo">
+                    <p class="descricao_produto">Sabonete liquido de capim limão</p>                                     
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Sabonete Liquido')">+</button>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+        <div class = "col-sm-4 mb-3">
+            <div class = "cartao_produto" >
+                <h4 class="nome_produto text-center">Desinfetante</h4>
+                <img src="desinfetante.png" class = "img-fluid foto_produto" alt="imagem_Desinfetante">
+                <p class="preco">3,99$</p>
+
+                <div class="card_completo">
+                    <p class="descricao_produto">Desinfetante Pato</p>                                       
+                    <p class="descricao_servicos">🏬 Retirada no local gratuito <br> ou <br> 🚚 Tele-Entrega a partir de 4,99$</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal" onclick="selecionarProduto('Desinfetante')">+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    </main>
+
+        <footer>
+            <hr>
+            <p>Voltar ao <b><a href="#Menu">começo</a></b> 
+            <div> 
+            <p><b><a href="contatos.html">Telefone:</a> +55 12 56557-4544</b></p>
+            <p><b><a href="contatos.html">Email:</a> atendimentoaocliente@bompreco.com</b></p>
+            </div>&copy;2025 Mercado Bom Preço | Desenvolvido por Rafael Rezende Rodrigues <b>PUCRS</b></p>
+        </footer>
+    </div>
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+    <!-- Modal de Checkout -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Cabeçalho -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">Finalizar Compra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+  
+        <!-- Corpo -->
+        <div class="modal-body">
+          <h6 id="produtoSelecionado"></h6>
+          <p>Selecione como deseja receber seu pedido:</p>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="opcaoEntrega" id="recolha" value="recolha">
+            <label class="form-check-label" for="recolha">
+              🏬 Retirada no local (Gratuita)
+            </label>
+          </div>
+  
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="radio" name="opcaoEntrega" id="entrega" value="entrega">
+            <label class="form-check-label" for="entrega">
+              🚚 Tele-Entrega (+4,99$)
+            </label>
+          </div>
+          
+          <!------- Marcação da data de entrega------->
+          <div id="DataEntrega" class="mt-2" style="display: none;">
+            <label for="dataEntrega" class="form-label">Escolha a data de entrega:</label>
+            <input type="date" id="dataEntrega" class="form-control">
+          </div>
+        </div>
+  
+        <!-- Rodapé -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Confirmar Pedido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!------------------Script do modal, aparecer o nome do produto selecionado------------------------------------>
+  <script>
+    function selecionarProduto(nomeProduto) {
+      document.getElementById("produtoSelecionado").innerText = "Produto: " + nomeProduto;
+    }
+  </script>
+
+<!------------------Script de selecionar serviço------------------------------------>
+  <script>
+    const entregaRadio = document.getElementById('entrega');
+    const recolhaRadio = document.getElementById('recolha');
+    const SelecionaData = document.getElementById('DataEntrega');
+  
+    entregaRadio.addEventListener('change', () => {
+      if (entregaRadio.checked) {
+        SelecionaData.style.display = 'block';
+      }
+    });
+  
+    recolhaRadio.addEventListener('change', () => {
+      if (recolhaRadio.checked) {
+        SelecionaData.style.display = 'none';
+      }
+    });
+  </script>
+
+  
+    <script src="scripts.js"></script>
+</body>
+</html>
